@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us — DivyaAbility Foundation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+ 
+  <header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="./assets/logo.avif" alt="DivyaAbility Logo" class="logo-img" />
+      <span class="tagline">DivyaAbility Foundation</span>
+    </div>
+
+    <!-- <form class="search-form" id="site-search-form" action="#">
+      <input type="text" placeholder="What are you looking for?" id="site-search" aria-label="Search" autoComplete="off" />
+      <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+    </form> -->
+
+    <div class="header-actions">
+      <a href="./login.html" class="btn login-btn">Login/Signup</a>
+      <a href="./checkout.html" class="btn donate-btn">Donate Now</a>
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <!-- <li><a href="#webinars">Webinars</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li> -->
+    </ul>
+  </nav>
+</header>
+
+
+
+  <style>
+   .header {
+  background: var(--primary);
+  color: #d93737;
+  padding-top: 10px;
+  box-shadow: var(--shadow);
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px; 
+   padding: 2px 0 10px 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.logo .tagline {
+  font-size: 1rem;
+  opacity: 0.93;
+  margin-left: 8px;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 27px;
+  padding: 3px 9px 3px 16px;
+  border: 1px solid #e3e3e3;
+  margin-right: -100px;
+  min-width: 180px;
+  max-width: 340px;
+  width: 100%;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}
+
+.search-form input {
+  border: none;
+  font-size: 1rem;
+  padding: 8px 4px;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: #222;
+}
+
+.search-form button {
+  border: none;
+  background: none;
+  font-size: 1.15rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 4px 7px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+}
+
+.login-btn,
+.donate-btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 7px 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.login-btn {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.login-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.donate-btn {
+  background: #0b4fec;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 5px;
+}
+
+.donate-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.login-btn{
+ background:  #0b4fec;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 5px;
+}
+.login-btn:hover{
+background: #ffffff;
+  color: #000000;
+  
+}
+nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(10,66,117,0.02);
+  margin-top: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 1 1 0;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 3px solid transparent;
+  transition: background 0.14s, border-bottom 0.16s;
+  background: #fff;
+  font-size: 1.09rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--secondary);
+  border-bottom: 3px solid var(--accent);
+  color: var(--primary);
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 900px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-top: 1px;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .search-form {
+    margin-right: 0;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex: none;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .login-btn,
+  .donate-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 14px 0 14px 8px;
+    border-radius: 0;
+    font-size: 1.04rem;
+    border-bottom: 1px solid #f6f6f6;
+    border-left: 4px solid transparent;
+    text-align: left;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom: 3px solid var(--accent);
+    border-left: 4px solid var(--accent);
+    background: var(--secondary);
+    color: var(--primary);
+  }
+}
+
+
+@media (max-width: 600px) {
+.logo{
+  margin-top: -60px;
+  margin-bottom: -80px;
+  /* align-content: center; */
+  align-self: center;
+}
+.webinars-video{
+
+  margin-top: -140px;
+}
+.scribes-image{
+margin-top: -180px;
+/* margin-bottom: 10px; */
+}
+ .logo-img {
+    height: auto;
+    width: 120px; /* fixed smaller width */
+    max-width: 50vw;
+  }
+  .logo .tagline {
+    font-size: 0.9rem;
+  }
+
+  .search-form input {
+    font-size: 0.95rem;
+    padding: 7px 4px;
+  }
+
+  .search-form button {
+    font-size: 1.1rem;
+    padding: 4px 6px;
+  }
+
+   .login-btn, .donate-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+ .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-left: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nav-links a.active,
+  .nav-links a:hover {
+    border-left: none;
+    border-bottom: 3px solid var(--accent);
+    background: var(--secondary);
+    color: var(--primary);
+  }
+  .header-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default; /* shows normal cursor */
+}
+
+.mission-item:hover {
+  box-shadow: 0 12px 20px rgba(0,0,0,0.25);
+  transform: translateY(-5px);
+}
+.mission-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.mission-text {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #1a2a4c;
+  font-weight: 500;
+}
+.highlight-image-section .container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.highlight-image-section .container:hover {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  transform: translateY(-8px);
+}
+
+.highlight-image {
+
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+
+}
+
+.hero{
+
+  text-align: center;
+  font-weight: bolder;
+}
+/* footer start */
+/* body {
+    background: #fbfbfd;
+} */
+
+.new_footer_area {
+    background: #fbfbfd;
+}
+
+
+.new_footer_top {
+    padding: 10px 0px 270px;
+    position: relative;
+      overflow-x: hidden;
+}
+.new_footer_area .footer_bottom {
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+.footer_bottom {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #000000;
+    padding: 27px 0px;
+}
+.new_footer_top .company_widget p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #6a7695;
+    margin-bottom: 20px;
+}
+.new_footer_top .company_widget .f_subscribe_two .btn_get {
+    border-width: 1px;
+    margin-top: 20px;
+}
+.btn_get_two:hover {
+    background: transparent;
+    color: #5e2ced;
+}
+.btn_get:hover {
+    color: #fff;
+    background: #6754e2;
+    border-color: #6754e2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+a:hover, a:focus, .btn:hover, .btn:focus, button:hover, button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.new_footer_top .f_widget.about-widget .f_list li a:hover {
+    color: #5e2ced;
+}
+.new_footer_top .f_widget.about-widget .f_list li {
+    margin-bottom: 11px;
+}
+.f_widget.about-widget .f_list li:last-child {
+    margin-bottom: 0px;
+}
+.f_widget.about-widget .f_list li {
+    margin-bottom: 15px;
+}
+.f_widget.about-widget .f_list {
+    margin-bottom: 0px;
+}
+
+
+.new_footer_top 
+
+.btn_get_two {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #1763a5;
+    border-color: #5e2ced;
+    color: #fff;
+}
+
+.btn_get_two:hover {
+    background: #0a365d;
+    color: #ffffff;
+}
+.f_social_icon a {
+  display: inline-block;
+  width: 40px; height: 40px;
+  line-height: 40px;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.f_social_icon a.fa-facebook-f { background-color: #3b5998; }
+.f_social_icon a.fa-twitter { background-color: #1da1f2; }
+.f_social_icon a.fa-instagram { background-color: #e1306c; }
+.f_social_icon a.fa-youtube { background-color: #ff0000; }
+
+.f_social_icon a:hover {
+  filter: brightness(85%);
+  text-decoration: none;
+}
+
+
+.new_footer_top .f-title {
+    margin-bottom: 30px;
+    color: #263b5e;
+}
+.f_600 {
+    font-weight: 600;
+}
+.f_size_18 {
+    font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #4b505e;
+}
+.new_footer_top .f_widget.about-widget .f_list li a {
+    color: #6a7695;
+}
+
+
+.new_footer_top .footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("./96xnyfq6.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.new_footer_top .footer_bg .footer_bg_one {
+    background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+  background-size:100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.new_footer_top .footer_bg .footer_bg_two {
+    background: url("./assets/boywalk.gif") no-repeat center center;
+    width: 200px;
+    height: 160px;
+  background-size:100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+
+
+@-moz-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes myfirst {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.about-highlight {
+  background: linear-gradient(90deg, #eaf1fa 40%, #fffde4 100%);
+  border-radius: 19px;
+  box-shadow: 0 6px 32px rgba(0,52,102,.13), 0 1.5px 4px rgba(0,52,102,.06);
+  padding: 32px 36px 26px 36px;
+  margin: 32px auto 38px auto;
+  max-width: 900px;
+  text-align: left;
+  position: relative;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.about-highlight:hover {
+  box-shadow: 0 14px 42px rgba(0,52,102,.22);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.about-highlight-quote {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1862a5;
+  margin-bottom: 15px;
+}
+
+.about-highlight .highlight-name {
+  color: #003366;
+  font-weight: 700;
+  background: #ffd44d;
+  padding: 2px 7px;
+  border-radius: 6px;
+  letter-spacing: 0.7px;
+}
+
+.about-highlight p {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: #1a2a4c;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .about-highlight {
+    padding: 18px 8px 16px 8px;
+    font-size: 1rem;
+  }
+  .about-highlight-quote {
+    font-size: 1.04rem;
+  }
+}
+.profile-card {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  box-shadow: 0 10px 35px rgba(0, 66, 117, 0.12);
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(35px);
+  animation: fadeInUp 0.8s ease forwards;
+  gap: 40px;
+  padding: 30px;
+}
+
+.profile-image img {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 66, 117, 0.15);
+}
+
+.profile-info {
+  flex: 1;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #ecba17;
+}
+
+.profile-info h4 {
+  color: #0a4275;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.profile-info p {
+  font-size: 1.04rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .profile-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .profile-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin-bottom: 25px;
+  }
+  .profile-info {
+    text-align: center;
+  }
+  .profile-info p {
+    text-align: left;
+  }
+}
+
+    </style> 
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container">
+      <!-- Hero Section -->
+      
+      
+      <!-- Who We Are -->
+      <section>
+
+        <h3 class="section-header">Who Are We?</h3>
+        
+        <!-- After the "Who We Are" section -->
+<section class="highlight-image-section">
+  <div class="container">
+    <img src="./assets/logo2.png" alt="Highlight Image" class="highlight-image" />
+  </div>
+</section>
+
+
+        <!-- <p>
+          Founded in February 2024, DivyaAbility Foundation is a registered Section 8 non-profit organization in India dedicated to empowering people with disabilities.<br>
+          We transform lives by making disability inclusion real — through inclusive education, digital skills training, mentorship, scholarships, and community programs.<br>
+          We believe true inclusion goes beyond physical access — it means changing perceptions, creating opportunities, and empowering every person to learn, grow, and lead.
+        </p>
+      -->
+        <div class="about-highlight">
+  <p class="about-highlight-quote"><em>Where others see limits, we see potential</em></p>
+  <p>
+    Founded in February 2024, <span class="highlight-name">DivyaAbility Foundation</span> is a registered Section 8 non-profit organization in India dedicated to empowering people with disabilities.
+  </p>
+  <p>
+    We transform lives by making disability inclusion real — through inclusive education, digital skills training, mentorship, scholarships, and community programs.
+  </p>
+  <p>
+    We believe true inclusion goes beyond physical access — it means changing perceptions, creating opportunities, and empowering every person to learn, grow, and lead.
+  </p>
+</div>
+
+      
+      <!-- Vision -->
+      <section>
+        <h3 class="section-header">Our Vision</h3>
+        <p>
+          A world where people with disabilities are not only included, but truly empowered to shape their own futures and inspire change.
+        </p>
+      </section>
+      
+      <!-- Mission -->
+      <section class="mission-section">
+  <h3 class="section-header">Our Mission</h3>
+  <div class="mission-item">
+    <div class="mission-image">
+      <img src="./assets/inclusivejpg.jpg" alt="Inclusive Education" />
+    </div>
+    <div class="mission-text">
+      Designing inclusive education programs and digital skill-building workshops
+    </div>
+  </div>
+  <div class="mission-item">
+    <div class="mission-image">
+      <img src="./assets/scholarship.jpg" alt="Scholarships" />
+    </div>
+    <div class="mission-text">
+      Offering scholarships for disabled students, ensuring education without financial barriers
+    </div>
+  </div>
+  <div class="mission-item">
+    <div class="mission-image">
+      <img src="./assets/supportjpg.jpg" alt="Support Services" />
+    </div>
+    <div class="mission-text">
+      Providing personalised support services that help learners study independently and confidently
+    </div>
+  </div>
+  <div class="mission-item">
+    <div class="mission-image">
+      <img src="./assets/empowermentjpg.jpg" alt="Advocacy" />
+    </div>
+    <div class="mission-text">
+      Advocating for a society where empowerment replaces sympathy
+    </div>
+  </div>
+</section>
+
+      
+      <!-- Uniqueness -->
+      <section>
+        <h3 class="section-header">What Makes Us Unique</h3>
+        <ul class="impact-list">
+          <li>We turn awareness into action, not just words</li>
+          <li>Every course and service is built around the real needs and voices of the disability community</li>
+          <li>We focus on skill development and confidence, giving learners the tools to thrive in study, work, and daily life</li>
+          <li>        At DivyaAbility, inclusion isn’t a checkbox — it’s at the heart of everything we do.
+</li>  
+        </ul>
+      </section>
+      
+      <!-- Team -->
+       <section>
+       <h3 class="section-header">About Our Team</h3>
+
+<div class="profile-card">
+  <div class="profile-image">
+    <img src="./assets/shiva.jpg" alt="shiva" />
+  </div>
+  <div class="profile-info">
+    <h3>Shivakant Singh
+</h3>
+    <h4>Founder & CEO
+</h4>
+    <p>
+      A passionate changemaker with over three years of cross-functional experience in the disability sector, managing responsibilities across profiles such as recruitment, training, community outreach, advocacy, and stakeholder engagement. A postgraduate from IIIT Bangalore, he brings strong expertise in business operations and strategic execution. At DivyaAbility Foundation, he leads with a bold vision to drive scalable, inclusive impact—transforming awareness into action through on-ground initiatives, partnerships, and systems-level change.
+    </p>
+  </div>
+</div>
+
+
+    <div class="profile-card">
+  <div class="profile-image">
+    <img src="./assets/chandra.jpg" alt="Chandramani Semwal" />
+  </div>
+  <div class="profile-info">
+    <h3>Chandramani Semwal</h3>
+    <h4>Head of Talent & Career Development</h4>
+    <p>
+      Chandramani is a passionate HR professional with rich experience in recruitment, training, advocacy, and accessibility in the disability sector. A postgraduate from the Sydenham Institute of Management, he has led initiatives that achieved full accessibility compliance across multiple platforms and boosted student engagement by 30% through impactful training programs. At DivyaAbility Foundation, he drives inclusive talent strategies, innovative learning programs, and scalable career development for persons with disabilities.
+    </p>
+  </div>
+</div>
+
+
+  <div class="profile-card">
+  <div class="profile-image">
+    <img src="./assets/poonam.png" alt="poonam" />
+  </div>
+  <div class="profile-info">
+    <h3>Poonam Bashyal </h3>
+    <h4>
+
+Social Media & Marketing Associate
+</h4>
+    <p>Poonam combines her academic knowledge in Business Studies and practical teaching experience to craft inclusive and engaging content. With a passion for purposeful communication, she strengthens DivyaAbility Foundation’s digital outreach, inspiring connection and driving social impact.</p>
+  </div>
+</div>
+
+
+ 
+
+   <div class="profile-card">
+  <div class="profile-image">
+    <img src="./assets/shwetha.png" alt="shwetha" />
+  </div>
+  <div class="profile-info">
+    <h3>Shweta Bansal</h3>
+    <h4>Admin & Operations Associate</h4>
+   <p>A graduate of the University of Delhi, Shweta supports the smooth daily operations at DivyaAbility Foundation. Skilled in assistive technologies, document management, and digital tools, she combines efficiency with empathy—helping us stay organized, inclusive, and focused on our mission.</p>
+  </div>
+</div>
+
+</section>
+
+
+      
+      <!-- Why It Matters -->
+      <section>
+        <h3 class="section-header">Why It Matters</h3>
+        <p style="align-items: center;">
+          At its core, disability inclusion is not an act of charity — it’s a shared responsibility.<br>
+          By investing in inclusive education, skill development, and digital literacy, we help turn potential into purpose, and hope into action.
+        </p>
+      </section>
+      
+      <!-- Join Us -->
+      <section>
+        <h3 class="section-header">Join Us</h3>
+        <p style="align-content: center;">
+          Whether you are a student, volunteer, donor, or advocate, you have the power to create change.<br>
+          <strong>Together, we can build a world where everyone, regardless of ability, can belong, learn, and lead.</strong>
+        </p>
+      </section>
+    </div>
+  </main>
+  
+ 
+<footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Help us in creating a world of inclusion. Give a little, change a lot.</h3>
+                                <!-- <p>Help us in creating a world of inclusion. Give a little, change a lot.</p> -->
+                                <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                    <!-- <input type="text" name="EMAIL" class="form-control memail" placeholder="Email"> -->
+                                    <button class="btn btn_get btn_get_two" type="submit">Donate Now</button><p></p>
+                                    
+                                    <p class="mchimp-errmessage" style="display: none;"></p>
+                                    <p class="mchimp-sucmessage" style="display: none;"></p>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">CONNECT WITH US</h3>
+                                <div class="f_social_icon">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.linkedin.com/company/divyaabilityfoundation/" class="fab fa-linkedin"></a>
+                                    <a href="https://www.instagram.com/divyaabilityfoundation/?igsh=MWFyanA2YXVhcXNhcw%3D%3D#" class="fab fa-instagram"></a>
+                                    <a href="https://www.youtube.com/@divyaabilityfoundation" class="fab fa-youtube"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">© 2024 DivyaAbility Foundation. All rights reserved.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
