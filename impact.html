@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Impact | DivyaAbility Foundation</title>
+  <link rel="stylesheet" href="impact_style.css" />
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+   
+    /* Reset margin */
+    body {
+      margin: 0;
+      scroll-behavior: smooth; /* smooth scroll for anchors */
+      overflow-x: hidden;
+ 
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+    }
+    css
+/* Add box-sizing globally */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.header {
+  background: var(--primary);
+  color: #d93737;
+  padding-top: 10px;
+  box-shadow: var(--shadow);
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px; 
+   padding: 2px 0 10px 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.logo .tagline {
+  font-size: 1rem;
+  opacity: 0.93;
+  margin-left: 8px;
+  color: #fff;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 27px;
+  padding: 3px 9px 3px 16px;
+  border: 1px solid #e3e3e3;
+  margin-right: -100px;
+  min-width: 180px;
+  max-width: 340px;
+  width: 100%;
+  flex: 1 1 300px;
+  box-sizing: border-box;
+}
+
+.search-form input {
+  border: none;
+  font-size: 1rem;
+  padding: 8px 4px;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: #222;
+}
+
+.search-form button {
+  border: none;
+  background: none;
+  font-size: 1.15rem;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 4px 7px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  min-width: 200px;
+  flex-wrap: wrap;
+}
+
+.login-btn,
+.donate-btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 7px 16px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.login-btn {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.login-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.donate-btn {
+  background: #0b4fec;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 5px;
+}
+
+.donate-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+.login-btn{
+ background:  #0b4fec;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 5px;
+}
+.login-btn:hover{
+background: #ffffff;
+  color: #000000;
+  
+}
+nav {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(10,66,117,0.02);
+  margin-top: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  flex: 1 1 0;
+}
+
+.nav-links a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 3px solid transparent;
+  transition: background 0.14s, border-bottom 0.16s;
+  background: #fff;
+  font-size: 1.09rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--secondary);
+  border-bottom: 3px solid var(--accent);
+  color: var(--primary);
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 900px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-top: 1px;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .search-form {
+    margin-right: 0;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    flex: none;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .login-btn,
+  .donate-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 14px 0 14px 8px;
+    border-radius: 0;
+    font-size: 1.04rem;
+    border-bottom: 1px solid #f6f6f6;
+    border-left: 4px solid transparent;
+    text-align: left;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-bottom: 3px solid var(--accent);
+    border-left: 4px solid var(--accent);
+    background: var(--secondary);
+    color: var(--primary);
+  }
+}
+
+@media (max-width: 600px) {
+.logo{
+  margin-top: -60px;
+  margin-bottom: -80px;
+  /* align-content: center; */
+  align-self: center;
+}
+.webinars-video{
+
+  margin-top: -140px;
+}
+.scribes-image{
+margin-top: -180px;
+/* margin-bottom: 10px; */
+}
+ .logo-img {
+    height: auto;
+    width: 120px; /* fixed smaller width */
+    max-width: 50vw;
+  }
+  .logo .tagline {
+    font-size: 0.9rem;
+  }
+
+  .search-form input {
+    font-size: 0.95rem;
+    padding: 7px 4px;
+  }
+
+  .search-form button {
+    font-size: 1.1rem;
+    padding: 4px 6px;
+  }
+
+   .login-btn, .donate-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+ .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    padding: 12px 16px;
+    border-left: none;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .nav-links a.active,
+  .nav-links a:hover {
+    border-left: none;
+    border-bottom: 3px solid var(--accent);
+    background: var(--secondary);
+    color: var(--primary);
+  }
+  .header-flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+}
+
+    /* Footer fixes */
+    .new_footer_top .social-widget {
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .new_footer_top .f_social_icon {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: -50px;
+    }
+
+    .new_footer_top .f_social_icon a {
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      font-size: 22px;
+      color: #858da8;
+      background: #ebeef5;
+      border: 1px solid #e2e2eb;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .new_footer_top .f_social_icon a:hover {
+      background: #1763a5;
+      color: #fff;
+      border-color: #5e2ced;
+    }
+
+    .footer_bottom .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .footer_bottom .col-lg-6.col-sm-7 {
+      flex: none;
+    }
+
+    .footer_bottom p.mb-0 {
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      color: #000; /* black text as per your CSS */
+      font-weight: 300;
+      font-size: 14px;
+
+    }
+.footer_nav_widget {
+  text-align: center; /* Center align all content */
+}
+ 
+.footer-nav-link {
+  color: #6a7695;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+   display: inline-block;
+}
+
+
+.footer-nav-link:hover {
+  color: #005baa; /* or your accent color */
+  text-decoration: underline;
+}
+   .footer_nav_links li {
+  margin-bottom: 8px;
+}
+
+
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="./assets/logo.avif" alt="DivyaAbility Logo" class="logo-img" />
+      <span class="tagline">DivyaAbility Foundation</span>
+    </div>
+
+    <!-- <form class="search-form" id="site-search-form" action="#">
+      <input type="text" placeholder="What are you looking for?" id="site-search" aria-label="Search" autoComplete="off" />
+      <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+    </form> -->
+
+    <div class="header-actions">
+      <!-- <a href="./login.html" class="btn login-btn">Login/Signup</a> -->
+      <a href="./checkout.html" class="btn donate-btn">Donate Now</a>
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <!-- <li><a href="#webinars">Webinars</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li> -->
+    </ul>
+  </nav>
+</header>
+
+
+
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="impact-header">
+        <h2>Our Impact</h2>
+        <p class="impact-subtitle">
+          Turning Purpose into Measurable Progress
+        </p>
+        <p class="impact-intro">
+          At DivyaAbility Foundation, inclusion isn’t just a goal — it’s a
+          measurable journey.
+          Through knowledge, access, and action, we continue to unlock the
+          potential within the disability community across India.
+        </p>
+      </div>
+
+
+      <!-- highlights -->
+<section class="impact-highlights-section">
+  <div class="container">
+    <h3 class="section-title">Highlights That Define Our Work:</h3>
+    <ul class="highlights-list">
+      <li><strong>500+</strong> lives advanced through courses, mentoring, and workshops</li>
+      <li><strong>20+</strong> states presence — inclusion without boundaries</li>
+      <li><strong>10+</strong> curated courses building real-world confidence and capability</li>
+      <li><strong>10+</strong> powerful webinars centering lived experiences</li>
+      <li><strong>20+</strong> committed volunteers turning intention into everyday action</li>
+    </ul>
+  </div>
+</section>
+
+
+
+      <div class="impact-scholarships">
+        <h3>Scholarships that Open Doors</h3>
+        <p>
+          Our scholarships remove barriers to learning, connecting driven
+          students with the opportunities they deserve.
+        </p>
+        <h4>Meet a few of our scholars:</h4>
+        <ul>
+          <li>MBA: Chandramani Semwal – Tata Institute of Social Sciences (TISS), Mumbai</li>
+          <li>BTech: Laxman Prasad Mishra – Computer Science, IIIT Nagpur, Maharashtra</li>
+          <li>LLB: Lakshmish – Bangalore Institute of Legal Studies, Bangalore</li>
+        </ul>
+        <p><strong>More Such stories:</strong></p>
+        <p><em>Harwinder Kaur – Class 10th, Ludhiana</em></p>
+        <p class="scholarship-story">
+          Harwinder, a learner with cerebral palsy, accessed scholarship support
+          to pursue her Class 10 education, shaping her academic journey with
+          strength and vision.
+        </p>
+      </div>
+<section class="impact-courses">
+  <div class="container impact-courses-container">
+
+    <div class="courses-intro">
+      <h3>Upskilling with Purpose: Our Courses</h3>
+      <p>We’ve built a library of over 10 inclusive, career-aligned courses that continue to reach individuals from under-resourced and unskilled backgrounds, transforming knowledge into agency.</p>
+    </div>
+
+    <div class="courses-grid">
+      <article class="course-card">
+        <div class="course-icon">
+          <!-- Put your generated relevant math icon image here or an inline SVG -->
+          <img src="./assets/MATH.png" alt="Maths & Reasoning Icon" />
+        </div>
+        <div class="course-content">
+          <h4>Competitive Fundamentals of Maths & Reasoning</h4>
+          <p>Learners master concepts in a screen-reader-friendly format, confidently navigating exams and reshaping perceptions about disability and numerical thinking.</p>
+        </div>
+      </article>
+      
+      <article class="course-card">
+        <div class="course-icon">
+          <img src="./assets/latex.png" alt="Accessible Maths LaTeX Icon" />
+        </div>
+        <div class="course-content">
+          <h4>Accessible Maths with LaTeX</h4>
+          <p>Participants engage with mathematical content using assistive technology, bringing academic writing into inclusive spaces with precision and ease.</p>
+        </div>
+      </article>
+      
+      <article class="course-card">
+        <div class="course-icon">
+          <img src="./assets/stock.jpg" alt="Stock Market Analysis Icon" />
+        </div>
+        <div class="course-content">
+          <h4>Stock Market: Fundamental & Technical Analysis</h4>
+          <p>Individuals gain insight into market trends and strategy, confidently participating in financial decision-making and long-term planning.</p>
+        </div>
+      </article>
+      
+      <article class="course-card">
+        <div class="course-icon">
+          <img src="./assets/excel.jpg" alt="ExcelPro Course Icon" />
+        </div>
+        <div class="course-content">
+          <h4>ExcelPro Course</h4>
+          <p>Participants navigate spreadsheets, manage data, and streamline tasks — powering their workspaces and daily life with independence and clarity.</p>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- awareness through conversations -->
+<section class="impact-webinars">
+  <div class="container impact-webinars-container">
+    <div class="webinars-text">
+      <h3>Awareness Through Real Conversations</h3>
+      <p>
+        Our webinars spotlight key conversations around disability rights, inclusion, mental well-being, 
+        and accessible tools — igniting curiosity, understanding, and collaboration across communities.
+      </p>
+    </div>
+    <div class="webinars-video">
+      <video autoplay loop muted playsinline>
+        <source src="./assets/awareness.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- scribe -->
+<section class="impact-scribes">
+  <div class="container impact-scribes-container">
+    <div class="scribes-text">
+      <h3>Scribe Access That Levels the Field</h3>
+      <p>
+        We coordinate scribe support for academic and competitive exams across the states we serve,
+        bridging a crucial gap and ensuring seamless exam readiness for visually impaired candidates.
+      </p>
+    </div>
+    <div class="scribes-image">
+      <img src="./assets/SCRIBE.png" alt="Scribe support for visually impaired candidates" />
+    </div>
+  </div>
+</section>
+
+
+      <div class="impact-donate">
+        <p class="donate-phrase">
+          Every achievement here is powered by people — learners, mentors, and
+          changemakers like you. When you give, you don't donate — you invest in
+          ability, dignity, and progress.<br />
+          <strong>Be part of something transformative.</strong>
+        </p>
+        <a href="#donate" class="btn donate-btn">Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+ 
+<footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <br><h3 class="f-title f_600 t_color f_size_18" style="margin-top: -50px;">CONNECT WITH US</h3>
+                                <div class="f_social_icon">
+                                    <a href="#" class="fab fa-facebook-f"></a>
+                                    <a href="https://www.linkedin.com/company/divyaabilityfoundation/" class="fab fa-linkedin"></a>
+                                    <a href="https://www.instagram.com/divyaabilityfoundation/?igsh=MWFyanA2YXVhcXNhcw%3D%3D#" class="fab fa-instagram"></a>
+                                    <a href="https://www.youtube.com/@divyaabilityfoundation" class="fab fa-youtube"></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+          <div class="f_widget footer_nav_widget pl_70 wow fadeInLeft" data-wow-delay="1.0s" style="visibility: visible; animation-delay: 1.0s; animation-name: fadeInLeft;">
+            <br><h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
+            <ul class="footer_nav_links" style="list-style:none; padding-left:0;">
+              <li><a href="index.html" class="footer-nav-link">Home</a></li>
+              <li><a href="about.html" class="footer-nav-link">About</a></li>
+              <li><a href="impact.html" class="footer-nav-link">Impact</a></li>
+              <li><a href="index.html#about" class="footer-nav-link"></a>
+</li>
+              
+            </ul>
+          </div>
+        </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">© 2024 DivyaAbility Foundation. All rights reserved.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </footer>
+  <script>
+    // Navbar link smooth active toggle on click
+  document.querySelectorAll('.navbar-links a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.scrollIntoView({behavior: 'smooth'});
+        // Set active link, etc.
+      }
+    }
+    // Else, normal navigation will occur
+  });
+});
+
+  </script>
+</body>
+</html>
