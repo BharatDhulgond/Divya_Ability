@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses | DivyaAbility Foundation</title>
+  <link rel="stylesheet" href="Course_styles.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+   
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="./assets/logo.avif" alt="DivyaAbility Logo" class="logo-img" />
+      <span class="tagline">DivyaAbility Foundation</span>
+    </div>
+
+    <!-- <form class="search-form" id="site-search-form" action="#">
+      <input type="text" placeholder="What are you looking for?" id="site-search" aria-label="Search" autoComplete="off" />
+      <button type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+    </form> -->
+
+    <div class="header-actions">
+      <a href="./login.html" class="btn login-btn">Login/Signup</a>
+      <a href="./checkout.html" class="btn donate-btn">Donate Now</a>
+      <!-- <button id="logout-btn">Logout</button> -->
+
+    </div>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <!-- <li><a href="#webinars">Webinars</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li> -->
+    </ul>
+  </nav>
+</header>
+
+  <main class="container main-content">
+    <h1 class="page-title">Our Courses</h1>
+    <section class="courses-list">
+      <!-- course cards added by JS -->
+    </section>
+
+    <section class="refund-policy">
+      <h2>Refund Policy</h2>
+      <p>
+        We strive for your complete satisfaction. If you are not satisfied with
+        your purchase, you may request a refund within 14 days of purchase,
+        provided you have not accessed more than 20% of the course content.
+        Please contact our support team for refund requests.
+      </p>
+    </section>
+  </main>
+ <div class="impact-donate">
+        <p class="donate-phrase">
+          Every achievement here is powered by people — learners, mentors, and
+          changemakers like you. When you give, you don't donate — you invest in
+          ability, dignity, and progress.<br />
+          <strong>Be part of something transformative.</strong>
+        </p>
+        <a href="checkout.html" class="btn donate-btn">Donate Now</a>
+      </div>
+    </div>
+<footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <br><h3 class="f-title f_600 t_color f_size_18">CONNECT WITH US</h3>
+                                <div class="f_social_icon">
+  <a href="#" class="fab fa-facebook-f"></a>
+  <a href="https://www.linkedin.com/company/divyaabilityfoundation/" class="fab fa-linkedin-in"></a>
+  <a href="https://www.instagram.com/divyaabilityfoundation/" class="fab fa-instagram"></a>
+  <a href="https://www.youtube.com/@divyaabilityfoundation" class="fab fa-youtube"></a>
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+          <div class="f_widget footer_nav_widget pl_70 wow fadeInLeft" data-wow-delay="1.0s" style="visibility: visible; animation-delay: 1.0s; animation-name: fadeInLeft;">
+            <br><h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
+            <ul class="footer_nav_links" style="list-style:none; padding-left:0;">
+              <li><a href="index.html" class="footer-nav-link">Home</a></li>
+              <li><a href="about.html" class="footer-nav-link">About</a></li>
+              <li><a href="impact.html" class="footer-nav-link">Impact</a></li>
+              <li><a href="#" class="footer-nav-link">Courses</a></li>
+
+
+              
+            </ul>
+          </div>
+        </div>
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400" style="text-align: center;">© 2024 DivyaAbility Foundation. All rights reserved.</p>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+  <script src="courses_script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // const loginBtn = document.querySelector(".login-btn");
+const loginBtn = document.querySelector(".login-btn");
+
+if (localStorage.getItem("loggedIn") === "true") {
+  // Logged in → show Logout
+  loginBtn.textContent = "Logout";
+  loginBtn.href = "#"; // prevent navigation
+
+  loginBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+    alert("You have been logged out.");
+    window.location.href = "./login.html";
+  });
+} else {
+  // Not logged in → keep Login/Signup
+  loginBtn.textContent = "Login/Signup";
+  loginBtn.href = "./login.html";
+}
+
+ 
+});
+</script>
+
+</body>
+</html>
